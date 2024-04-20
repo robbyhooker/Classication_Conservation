@@ -1,4 +1,4 @@
-# Conservation for Classification
+# Classification for Conservation
  My senoir project!
 
 This project is a machine learning model which performs object detection on aerial wildlife image data, which is being done using the YOLOv8 algorithm. 
