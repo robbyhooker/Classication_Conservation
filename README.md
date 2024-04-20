@@ -11,19 +11,19 @@ The WAID dataset contains 14,366 images, split into train, validation, and test 
 All images are a uniform 640 x 640 pixels, and contain corresponding anotation files
 Animal Classes include: cattle, sheep, seals, kiang, camels, and zebras
 EX:
-![alt text](https://github.com/robbyhooker/Classification_Conservation/raw/master/test.jpg)
+![alt text](https://github.com/robbyhooker/Classification_Conservation/raw/main/test.jpg)
 
 ## Training
 The final model was trained over 100 epochs, with a batch size of sixteen
 During training we see loss decrease and mAP increase:
-![alt text](https://github.com/robbyhooker/Classification_Conservation/raw/master/Screenshot 2024-04-20 111331.png)
+![alt text](https://github.com/robbyhooker/Classification_Conservation/raw/main/Screenshot 2024-04-20 111331.png)
 ## Testing
 In testing the model we see consistent accuracy throughout classes:
-![alt text](https://github.com/robbyhooker/Classification_Conservation/raw/master/Screenshot 2024-04-20 111356.png)
+![alt text](https://github.com/robbyhooker/Classification_Conservation/raw/main/Screenshot 2024-04-20 111356.png)
 
 
 We also see the model is sufficient object detector in the test images:
-![alt text](https://github.com/robbyhooker/Classification_Conservation/raw/master/sheep_annotated.jpg)
+![alt text](https://github.com/robbyhooker/Classification_Conservation/raw/main/sheep_annotated.jpg)
 
 
 
