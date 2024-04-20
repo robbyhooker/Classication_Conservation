@@ -11,7 +11,7 @@ The WAID dataset contains 14,366 images, split into train, validation, and test 
 All images are a uniform 640 x 640 pixels, and contain corresponding anotation files
 Animal Classes include: cattle, sheep, seals, kiang, camels, and zebras
 EX:
-![alt text](https://github.com/robbyhooker/Classification_Conservation/raw/main/example_images/test.jpg)
+![alt text](https://github.com/robbyhooker/Classification_Conservation/raw/master/example_images/testsheep.jpg)
 
 ## Training
 The final model was trained over 100 epochs, with a batch size of sixteen
