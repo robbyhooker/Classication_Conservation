@@ -12,6 +12,7 @@ All images are a uniform 640 x 640 pixels, and contain corresponding anotation f
 Animal Classes include: cattle, sheep, seals, kiang, camels, and zebras
 
 Example Image of Sheep:
+<br>
 ![alt text](https://github.com/robbyhooker/Classication_Conservation/blob/main/example_images/sheeptest.jpg)
 
 ## Training
