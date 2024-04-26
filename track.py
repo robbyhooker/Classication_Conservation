@@ -2,7 +2,8 @@ from ultralytics import YOLO
 import os
 
 save_dir = os.getcwd()
+video_file = 'camels.mp4'
 
-model = YOLO('weights/animalDetector.pt')
+model = YOLO('animalDetector.pt')
 
-results = model.track(source='camels.mp4', show=False, tracker="bytetrack.yaml", save=True, save_dir=save_dir)
+results = model.track(source=video_file, show=False, tracker="bytetrack.yaml", save=True, project=os.getcwd())
