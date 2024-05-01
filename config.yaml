@@ -1,0 +1,11 @@
+path: "/content/drive/My Drive/WAID/WAID-main/WAID-main/WAID"
+train: images/train
+val: images/test
+
+names:
+  0: sheep
+  1: cattle
+  2: seal
+  3: kiang
+  4: camelus
+  5: zebra
