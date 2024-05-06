@@ -3,7 +3,13 @@ import numpy as np
 from sklearn.cluster import KMeans
 from tqdm import tqdm
 
+"""
+File uses k-means clustering to generate anchor boxes
+Anchor boxes are used as references for algorithm to build off in some versions of yolo
+YOLOv8 no longer uses anchor boxes
+"""
 
+# given path to dataset, get_boxes will compile all bounding box coordinates into an array
 def get_boxes(label_file_path):
     bounding_box_list = []
 
@@ -27,10 +33,11 @@ def get_boxes(label_file_path):
     bounding_box_array = np.array(bounding_box_list)
     return bounding_box_array
 
-
+# path to dataset
 label_path = '../../../desktop/WAID/WAID-main/WAID-main/WAID/labels/train'
 bounding_boxes = get_boxes(label_file_path=label_path)
 
+# perform k-means on total coordinate array
 num_clusters = 3
 kmeans = KMeans(n_clusters=num_clusters, random_state=0).fit(bounding_boxes)
 

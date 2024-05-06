@@ -1,7 +1,11 @@
+# path to base folder containing all images and annotations
 path: "/content/drive/My Drive/WAID/WAID-main/WAID-main/WAID"
+# path to trian images
 train: images/train
-val: images/test
+# path to set you want to test on
+val: images/val
 
+# class mapping
 names:
   0: sheep
   1: cattle

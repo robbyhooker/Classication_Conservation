@@ -10,7 +10,10 @@ from torch.utils.data import Dataset, DataLoader
 )
 """
 
-
+"""
+This file is not necessary to run YOLO training
+Using PyTorch Dataset class to prepare dataset in custom architecure
+"""
 class WAIDDataset(Dataset):
     def __init__(
         self,
@@ -32,7 +35,10 @@ class WAIDDataset(Dataset):
 
     def __len__(self):
         return len(self.annotations)
-
+    """
+    getitem is used to organize individual images for supervised learning
+    this funtion divides the images into a grid (tensor) and writes ground truth information into each cell of the tensor
+    """
     def __getitem__(self, index):
         label_path = os.path.join(self.label_dir, self.annotatins.iloc[index, 1])
         bboxes = np.roll(np.loadtxt(fname=label_path, delimiter=' ', ndmin=2), 4, axis=1).tolist()
