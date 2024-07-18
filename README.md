@@ -81,19 +81,29 @@ Originally, these predictions are random, as the model has no sense of the truth
 
 To measure the performance of the model we will use mean average precision (mAP). This is calculated by the area under the curve of the precision-recall curve, which is show below.<br>
 
-![alt text](https://github.com/robbyhooker/Classication_Conservation/blob/main/example_images/prec_recall.png)
 ![alt text](https://github.com/robbyhooker/Classication_Conservation/blob/main/example_images/pr_curve.png)
-![alt text](https://github.com/robbyhooker/Classication_Conservation/blob/main/example_images/iou.png)
 
 ## Results
-In testing the model we see consistent accuracy throughout classes:<br>
+For the training of our algorithm on aerial wildlife imagery, we will use the methods discussed, and expect to see a decrease in error and increase in accuracy over the course of training. In this case we will train over 100 passes of the dataset (epochs), in each epoch the model will ‘see’ each image in the dataset once, adjusting its parameters accordingly for each batch of images. The results of this project were obtaining using a batch size of 16, over 100 epochs. The charts below show the error and accuracy statistics of our model over the course of training.<br>
 
+The box_loss measures the error in the model’s bounding box predictions over the training of the model. It is calculated by the mean squared error between detected box coordinates and corresponding ground truth coordinates. Similarly, cls_loss measures the error in the model’s class predictions over the training of the model. It is calculated by the cross-entropy loss between the predicted class probabilities and the actual class label. Considering these are measures of error, we are pleased to see them decrease throughout training. Similarly, since mAP50 and mAP50-95 are measures of accuracy, we are pleased to see them increase of the course of training.<br>
+
+![alt text](https://github.com/robbyhooker/Classication_Conservation/blob/main/example_images/Screenshot%202024-04-20%20111331.png)
 ![alt text](https://github.com/robbyhooker/Classication_Conservation/blob/main/example_images/Screenshot%202024-04-20%20111356.png)
-
 
 We also see the model is sufficient object detector in the test images:<br>
 
 ![alt text](https://github.com/robbyhooker/Classication_Conservation/blob/main/example_images/sheep_annotated.jpg)
+
+## Conclusions
+Upon testing the model against data unseen in the training process, the statistics remain promising. We see that precision, recall, and map50 are consistently above 90%. The mAP50-95 averages 63.7% across all classes, which is still impressive considering the high IOU threshold. Given these statistics, I can confidently say this model is an adequate classifier of wildlife in images. It is also proven to be a sufficient tracker when applied to real world video of wildlife! So, the model is not only working on paper, but also performs well in practical cases. This is an exciting outcome for me, as I have learned how to apply methods that are being used to further the fields of ecology research and wildlife conservation!<br>
+
+## Future Work
+Going forward, I would like to bolster this model by adding more data, including more species of animal. Doing so might entail traveling to a habitat and collecting new data to add to the dataset. The goal is to have a model that can make predictions on all classes of animal in a habitat, and then deploy the model via live drone or UAV imagery. Coupling this with a dedicated GPU would allow for real time detection of animals in their natural environment!<br>
+
+I also look forward to tweaking the hyperparameters of the network  and analyzing its inner layers. This could lead to insight and a higher performing model.<br>
+
+
 
 
 
