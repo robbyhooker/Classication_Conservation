@@ -23,6 +23,14 @@ beginning of my further exploration of these fields.<br>
 This project is a machine learning model which performs object detection on aerial wildlife image data, which is being done using the YOLOv8 algorithm. 
 YOLOv8: [Jocher, G., Chaurasia, A., & Qiu, J. (2023). Ultralytics YOLO (Version 8.0.0) [Computer software]. https://github.com/ultralytics/ultralytics
 
+## Table of Contents
+
+1. [Dataset](#dataset)
+2. [Methods](#methods)
+3. [Results](#results)
+4. [Conclusions](#conclusions)
+5. [Future Work](#future-work)
+
 ## Dataset
 That data used is from the WAID dataset, whose acompanying paper can be found at the following link: https://www.mdpi.com/2076-3417/13/18/10397
 
